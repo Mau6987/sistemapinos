@@ -1,0 +1,19 @@
+.tabla-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.tablas {
+  border: 1px solid black;
+}
+
+.btn-crear-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-crear {
+  border-radius: 30px;
+}

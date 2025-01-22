@@ -1,0 +1,136 @@
+/* TableCargasAgua.css */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -2px  !important;
+}
+
+
+.tabla-div, .btn-crear-div {
+  width: 100%;
+  max-width: 960px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .tabla-div, .btn-crear-div {
+    padding: 10px;
+  }
+  .tabla-div {
+    position: relative;
+    top: -20px; /* Ajusta este valor según necesites */
+}
+
+
+  .tabla-div table {
+    font-size: 0.8em;
+    
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+
+  .tabla-div table thead {
+    display: none;
+  }
+
+  .tabla-div table tbody tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+  }
+
+  .tabla-div table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .tabla-div table tbody tr td:last-child {
+    border-bottom: none;
+  }
+
+  .tabla-div table tbody tr td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 40%;
+  }
+}
+.card-custom {
+  background-color: #343a40 !important;
+  border: 1px solid #454d55;
+  color: #fff !important;
+  border-radius: 5px;
+  width: 150%; /* Aquí estableces el ancho de los cards al 100% del contenedor */
+  max-width: 450px; /* Aquí limitas el ancho máximo para que no sea demasiado grande */
+}
+
+.card-custom .card-body .d-flex span {
+  color: #fff !important;
+}
+
+.card-custom .card-body .d-flex span strong {
+  color: #c0e0df9e !important;
+}
+/* Aumentar la especificidad para asegurar que los estilos se apliquen */
+.main-container .card-custom {
+  background-color: #343a40 !important;
+  border: 1px solid #454d55;
+  color: #fff !important;
+  border-radius: 5px;
+  width: 100%; /* Ajusta esto según el ancho deseado */
+  max-width: 100%; /* Asegúrate de que los cards no sean más anchos que su contenedor */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: añade sombra para mejor visibilidad */
+}
+
+.main-container .card-custom .card-body {
+  padding: 20px; /* Aumenta el padding dentro de los cards para mejor distribución del contenido */
+}
+
+@media (max-width: 768px) {
+  .main-container .card-custom {
+    max-width: 350px; /* Ajusta para móviles */
+  }
+}
+.tiny-input {
+  width: 1px; /* Tamaño pequeño */
+  height: 1px;
+  padding: 1px;
+  text-align: center;
+  font-size: 1px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  position: relative; /* Para que el z-index funcione */
+  z-index: 1; /* Asegúrate de que el campo esté debajo de los botones */
+}
+
+.btn-overlap {
+  z-index: 2; /* Asegúrate de que los botones estén encima del campo */
+  background-color: #007bff; /* Color sólido */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  pointer-events: auto; /* Asegura que los botones sean clicables */
+  padding: 5px 10px; /* Espaciado del botón */
+}
+
+.verify-btn {
+  left: 10px; /* Ajusta la posición para superponerse correctamente */
+  top: 1; /* Alinea verticalmente */
+}
+
+.position-relative {
+  position: relative;
+  display: inline-block; /* Para contener el tamaño del input */
+}
+
+.position-absolute {
+  position: absolute;
+  display: inline-block;
+}

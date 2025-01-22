@@ -1,0 +1,73 @@
+/* TableCargasAgua.css */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .tabla-div, .btn-crear-div {
+    width: 100%;
+    max-width: 960px;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    .tabla-div, .btn-crear-div {
+      padding: 10px;
+    }
+  
+    .tabla-div table {
+      font-size: 0.8em;
+    }
+  
+    .btn {
+      padding: 6px 12px;
+      font-size: 0.8em;
+    }
+  
+    .tabla-div table thead {
+      display: none;
+    }
+  
+    .tabla-div table tbody tr {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #dee2e6;
+      margin-bottom: 10px;
+    }
+  
+    .tabla-div table tbody tr td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid #dee2e6;
+    }
+  
+    .tabla-div table tbody tr td:last-child {
+      border-bottom: none;
+    }
+  
+    .tabla-div table tbody tr td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      width: 40%;
+    }
+  }
+  .card-custom {
+    background-color: #343a40 !important;
+    border: 1px solid #454d55;
+    color: #fff !important;
+    border-radius: 5px;
+  }
+  
+  .card-custom .card-body .d-flex span {
+    color: #fff !important;
+  }
+  
+  .card-custom .card-body .d-flex span strong {
+    color: #c0e0df9e !important;
+  }
+  

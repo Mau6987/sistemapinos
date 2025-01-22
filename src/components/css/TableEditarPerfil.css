@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrado vertical */
+  min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura de la pantalla */
+  padding: 20px; /* Añade un poco de espacio alrededor para evitar que el contenido toque los bordes */
+}
+
+.card {
+  width: 100%;
+  max-width: 300px; /* Ajusta el tamaño máximo del card para no ser demasiado grande en pantallas grandes */
+  margin-top: 10px; /* Añade espacio en la parte superior para bajar el card en la página */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para mejorar la estética */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-top: 20px; /* Menos espacio en la parte superior en dispositivos móviles */
+  }
+}
+.card-mobile {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}

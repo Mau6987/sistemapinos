@@ -1,0 +1,93 @@
+.NavbarItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 30px;
+    background-color: rgb(33, 33, 33);
+    box-shadow: 0 10px 15px black;
+    width: 80%; /* Cambiar a 100% para ocupar todo el ancho */
+    height: 80px;
+    border-radius: 0; /* Elimina el borde redondeado para un navbar fijo */
+    position: absolute; /* Cambia de absolute a fixed */
+    top: 20px;
+    left: 50%; /* Alinea el navbar a la izquierda */
+    transform: translate(-50%);
+    z-index: 1000; /* Asegúrate de que el navbar esté por encima de otros elementos */
+}
+
+
+.logo {
+    color: white;
+    justify-self: start;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0.7rem 2rem;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    background-color: #893AF0;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        position: absolute;
+        top: 80px;
+        background-color: rgb(55, 51, 51);
+        border-radius: 0 0 13px 13px;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: left;   
+    }
+}
+
+.dropdown-toggle {
+    background-color: rgb(55, 51, 51); /* Fondo inicial igual al del navbar */
+    border: none; /* Elimina el borde */
+    color: white; /* Texto blanco */
+    transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
+}
+
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+    background-color: rgb(40, 38, 38); /* Cambio a color morado al hacer hover */
+    color: white;
+}

@@ -1,0 +1,110 @@
+.main-container {
+  margin-top: -20px !important;
+}
+
+.main-container {
+  margin-top: -20px; /* Ajusta aún más si es necesario */
+  transform: translateY(-10px); /* Otra opción para mover el elemento hacia arriba */
+}
+
+.pago-carga-agua-table {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  padding: 30;
+  background-color: #fff; /* Fondo blanco para que resalten las filas */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pago-carga-agua-table thead {
+  background-color: #343a40; /* Color de fondo de la cabecera */
+  color: #fff; /* Color del texto en la cabecera */
+}
+
+.pago-carga-agua-table tbody tr:hover {
+  background-color: #27929a78; /* Color de fondo al pasar el mouse sobre una fila */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Espacio entre las tarjetas */
+}
+
+.card-custom {
+  background-color: #343a40 !important;
+  border: 1px solid #454d55;
+  color: #fff !important;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 200px; /* Ajusta el ancho máximo si es necesario */
+  padding: 40px; /* Añadimos padding para dar más espacio interno */
+  box-sizing: border-box; /* Incluimos padding y border en el tamaño total */
+}
+
+.card-custom .card-body .d-flex span {
+  color: #fff !important;
+}
+
+.card-custom .card-body .d-flex span strong {
+  color: #c0e0df9e !important;
+}
+
+@media (max-width: 768px) {
+  .pago-carga-agua-table thead {
+    display: none;
+  }
+
+  .pago-carga-agua-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+  }
+
+  .pago-carga-agua-table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .pago-carga-agua-table tbody tr td:last-child {
+    border-bottom: none;
+  }
+
+  .pago-carga-agua-table tbody tr td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 40%;
+  }
+}
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.card-custom {
+    background-color: #343a40 !important;
+    border: 1px solid #454d55;
+    color: #fff !important;
+    border-radius: 5px;
+    width: 60%; /* Ajusta el ancho según el tamaño deseado */
+    max-width: 600px; /* Ajusta el ancho máximo si es necesario */
+    padding: 20px; /* Añadimos padding para dar más espacio interno */
+    box-sizing: border-box; /* Incluimos padding y border en el tamaño total */
+}
+
+.card-custom .card-body .d-flex span {
+    color: #fff !important;
+}
+
+.card-custom .card-body .d-flex span strong {
+    color: #c0e0df9e !important;
+}

@@ -1,0 +1,59 @@
+/* Estilo para la tabla */
+.table {
+    background-color: #231f1f; /* Fondo claro */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    overflow: hidden;
+  }
+  
+  /* Cabecera de la tabla */
+  .table thead th {
+    background-color: #1e1f20; /* Color azul para la cabecera */
+    color: white; /* Texto blanco */
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Filas de la tabla */
+  .table tbody tr {
+    transition: background-color 0.3s;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1; /* Fondo al pasar el cursor */
+  }
+  
+  /* Celda */
+  .table tbody td {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Mini-cards para dispositivos móviles */
+  .mini-card {
+    background-color: #281f1f;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mini-card .card-header {
+    background-color: #231f1f;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .mini-card .card-body span {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .mini-card .card-actions button {
+    margin-right: 5px;
+  }
+  
