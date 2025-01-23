@@ -63,9 +63,6 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: ['react-router-dom'], // Asegúrate de que se trate como dependencia externa
-      external: ['axios']
-    
-      ,},
+      },
   },
 });
