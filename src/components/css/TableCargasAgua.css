@@ -1,102 +1,207 @@
 /* TableCargasAgua.css */
 .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -2px  !important;
+}
+
+
+.tabla-div, .btn-crear-div {
+  width: 100%;
+  max-width: 960px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .tabla-div, .btn-crear-div {
+    padding: 10px;
+  }
+  .tabla-div {
+    position: relative;
+    top: -20px; /* Ajusta este valor según necesites */
+}
+
+
+  .tabla-div table {
+    font-size: 0.8em;
+    
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+
+  .tabla-div table thead {
+    display: none;
+  }
+
+  .tabla-div table tbody tr {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: -2px  !important;
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
   }
-  
 
-  .tabla-div, .btn-crear-div {
-    width: 100%;
-    max-width: 960px;
-    box-sizing: border-box;
+  .tabla-div table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
   }
-  
-  @media (max-width: 768px) {
-    .tabla-div, .btn-crear-div {
-      padding: 10px;
-    }
-    .tabla-div {
-      position: relative;
-      top: -20px; /* Ajusta este valor según necesites */
+
+  .tabla-div table tbody tr td:last-child {
+    border-bottom: none;
   }
-  
-  
-    .tabla-div table {
-      font-size: 0.8em;
-      
-    }
-  
-    .btn {
-      padding: 6px 12px;
-      font-size: 0.8em;
-    }
-  
-    .tabla-div table thead {
-      display: none;
-    }
-  
-    .tabla-div table tbody tr {
-      display: flex;
-      flex-direction: column;
-      border: 1px solid #dee2e6;
-      margin-bottom: 10px;
-    }
-  
-    .tabla-div table tbody tr td {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-      border: none;
-      border-bottom: 1px solid #dee2e6;
-    }
-  
-    .tabla-div table tbody tr td:last-child {
-      border-bottom: none;
-    }
-  
-    .tabla-div table tbody tr td::before {
-      content: attr(data-label);
-      font-weight: bold;
-      width: 40%;
-    }
+
+  .tabla-div table tbody tr td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 40%;
   }
-  .card-custom {
-    background-color: #343a40 !important;
-    border: 1px solid #454d55;
-    color: #fff !important;
-    border-radius: 5px;
-    width: 150%; /* Aquí estableces el ancho de los cards al 100% del contenedor */
-    max-width: 450px; /* Aquí limitas el ancho máximo para que no sea demasiado grande */
-  }
-  
-  .card-custom .card-body .d-flex span {
-    color: #fff !important;
-  }
-  
-  .card-custom .card-body .d-flex span strong {
-    color: #c0e0df9e !important;
-  }
-  /* Aumentar la especificidad para asegurar que los estilos se apliquen */
+}
+.card-custom {
+  background-color: #343a40 !important;
+  border: 1px solid #454d55;
+  color: #fff !important;
+  border-radius: 5px;
+  width: 150%; /* Aquí estableces el ancho de los cards al 100% del contenedor */
+  max-width: 450px; /* Aquí limitas el ancho máximo para que no sea demasiado grande */
+}
+
+.card-custom .card-body .d-flex span {
+  color: #fff !important;
+}
+
+.card-custom .card-body .d-flex span strong {
+  color: #c0e0df9e !important;
+}
+/* Aumentar la especificidad para asegurar que los estilos se apliquen */
+.main-container .card-custom {
+  background-color: #343a40 !important;
+  border: 1px solid #454d55;
+  color: #fff !important;
+  border-radius: 5px;
+  width: 100%; /* Ajusta esto según el ancho deseado */
+  max-width: 100%; /* Asegúrate de que los cards no sean más anchos que su contenedor */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: añade sombra para mejor visibilidad */
+}
+
+.main-container .card-custom .card-body {
+  padding: 20px; /* Aumenta el padding dentro de los cards para mejor distribución del contenido */
+}
+
+@media (max-width: 768px) {
   .main-container .card-custom {
-    background-color: #343a40 !important;
-    border: 1px solid #454d55;
-    color: #fff !important;
-    border-radius: 5px;
-    width: 100%; /* Ajusta esto según el ancho deseado */
-    max-width: 100%; /* Asegúrate de que los cards no sean más anchos que su contenedor */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: añade sombra para mejor visibilidad */
+    max-width: 350px; /* Ajusta para móviles */
   }
-  
-  .main-container .card-custom .card-body {
-    padding: 20px; /* Aumenta el padding dentro de los cards para mejor distribución del contenido */
-  }
-  
-  @media (max-width: 768px) {
-    .main-container .card-custom {
-      max-width: 350px; /* Ajusta para móviles */
-    }
-  }
-  
+}
+.pagination-info {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.pagination-div {
+  display: flex;
+  justify-content: center;  /* Centrar los botones */
+  margin: 20px 0;  /* Espacio arriba y abajo */
+}.btn-filtro-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Alinea verticalmente */
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.btn-filtro {
+  background-color: #007bff; /* Color azul de Bootstrap */
+  color: white;
+  font-size: 1.2rem; /* Aumenta el tamaño del texto */
+  padding: 10px 20px; /* Relleno para mayor tamaño */
+  border-radius: 10px; /* Bordes redondeados */
+  border: none; /* Elimina el borde predeterminado */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: all 0.3s ease-in-out; /* Efecto de transición */
+}
+
+.btn-filtro:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+  transform: scale(1.05); /* Efecto de aumento */
+}
+/* 🔹 Centrar el botón de Filtros */
+.btn-filtro-container {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+
+.btn-filtro {
+font-size: 18px;
+padding: 10px 20px;
+border-radius: 8px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+/* 🔹 Centrar y mejorar el diseño del Card de Filtros */
+.filter-card {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+z-index: 1050;
+min-width: 350px;
+max-width: 90%;
+}
+
+.filter-card .card {
+border: none;
+}
+
+.filter-card .text-center {
+text-align: center;
+}
+
+.filter-card .form-control,
+.filter-card .form-check-label {
+font-size: 16px;
+}
+
+/* 🔹 Botones dentro del filtro */
+.filter-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 10px;
+}
+/* 🔹 Contenedor de botones (Filtros y Crear) */
+.btn-container {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px; /* Espacio entre los botones */
+margin-top: 20px;
+}
+
+/* 🔹 Estilo del botón de filtros */
+.btn-filtro {
+font-size: 16px;
+padding: 10px 20px;
+border-radius: 8px;
+display: flex;
+align-items: center;
+gap: 5px;
+}
+
+/* 🔹 Estilo del botón de crear */
+.btn-crear {
+font-size: 16px;
+padding: 10px 20px;
+border-radius: 8px;
+}
