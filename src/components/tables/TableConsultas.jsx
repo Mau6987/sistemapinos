@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Table, Button, Card, FormGroup, FormLabel, FormControl, Container, Row, Col, Pagination } from 'react-bootstrap';
 import Select from 'react-select';
-import { jsPDF } from 'jspdf';
-import 'jspdf-autotable';
+
 import Navbar from '../Navbar';
 
 const URL = 'https://mi-backendsecond.onrender.com/';
@@ -88,24 +87,7 @@ const TableConsultas = () => {
     return `${fecha.getDate().toString().padStart(2, '0')}/${(fecha.getMonth() + 1).toString().padStart(2, '0')}/${fecha.getFullYear()} ${fecha.getHours().toString().padStart(2, '0')}:${fecha.getMinutes().toString().padStart(2, '0')}`;
   };
   
-  const exportToPDF = () => {
-    const doc = new jsPDF();
-    doc.text('Reporte de Consultas', 10, 10);
-    if (cargas.length > 0) {
-      doc.autoTable({ head: [['ID', 'Fecha', 'Estado']], body: cargas.map(c => [c.id, c.fechaHora, c.estado]) });
-    }
-    if (pagos.length > 0) {
-      doc.autoTable({ head: [['ID', 'Fecha']], body: pagos.map(p => [p.id, p.fechaHora]) });
-    }
-    doc.save(`reporte_consultas_${new Date().toISOString().split('T')[0]}.pdf`);
-  };
-  const handleNuevaConsulta = () => {
-    setShowForm(true);
-    setCargas([]);
-    setPagos([]);
-    setCurrentPageCargas(1); // Reiniciar la paginación de cargas
-    setCurrentPagePagos(1); // Reiniciar la paginación de pagos
-  };
+  
   
   return (
     <Container className="mt-5">
@@ -201,7 +183,7 @@ const TableConsultas = () => {
   </>
 )}
   
-          <Button onClick={exportToPDF} className="mt-3 me-2" variant="success">Exportar PDF</Button>
+         
           <Button onClick={() => setShowForm(true)} className="mt-3" variant="secondary">Nueva Consulta</Button>
         </>
       )}
